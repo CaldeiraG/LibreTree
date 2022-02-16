@@ -1,0 +1,50 @@
+name : "Bug Report"
+description : "Report an error you're encountering with LibreTree"
+labels : [ bug ]
+body :
+  - type : markdown
+    attributes :
+      value : |
+        Thank you for reporting an issue to us!
+  - type : dropdown
+    id : installation_method
+    attributes :
+      label : Installation Method
+      description : How did you install LibreTree?
+      options :
+        - Docker
+        - PM2
+        - NPM
+    validations :
+      required : true
+  - type : textarea
+    id : version
+    attributes :
+      label : Version you're running
+      description : You can find it in the bottom right of your page.
+      placeholder : 1.0.0
+    validations :
+      required : false
+
+  - type : textarea
+    id : what-happened
+    attributes :
+      label : What happened?
+      description : Provide as much detail as possible along with what was the expected result.
+      placeholder : What happened?
+    validations :
+      required : true
+
+  - type : textarea
+    id : additional-info
+    attributes :
+      label : Additional information
+      description : Any additional information you'd like to provide?
+      placeholder : I'm using Docker on Arch Linux
+
+  - type : textarea
+    id : logs
+    attributes :
+      label : Relevant log output
+      description : Please copy and paste any relevant log output. This will be automatically formatted into code.
+      render : shell
