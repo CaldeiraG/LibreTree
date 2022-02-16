@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ma-1"><v-btn alt="GitHub" elevation="2" x-large color="#383838" href="https://github.com/CaldeiraG" class="white--text"><img width="24" height="24" :src="github" class="ma-1"/> GitHub</v-btn></div>
+    <div class="ma-1"><v-btn alt="GitHub" elevation="2" x-large color="#383838" href="github" class="white--text"><img width="24" height="24" :src="github" class="ma-1"/> GitHub</v-btn></div>
     <div class="ma-1"><v-btn alt="Twitter" elevation="2" x-large color="#1DA1F2" href="https://twitter.com/CaldeiraGG" class="white--text"><img width="24" height="20" :src="twitter" class="ma-1"/>Twitter</v-btn></div>
     <div class="ma-1"><v-btn alt="Ko-Fi" elevation="2" x-large color="#FF5E5B" href="https://ko-fi.com/caldeirag" class="white--text"><img width="24" height="24" :src="kofi" class="ma-1"/>Ko-Fi</v-btn></div>
     <div class="ma-1"><v-btn alt="Instagram" elevation="2" x-large href="https://instagram.com/caldeirag.xyz" class="white--text instagram"><img width="24" height="24" :src="instagram" class="ma-1"/>Instagram</v-btn></div>
@@ -58,7 +58,7 @@ export default {
       } catch($e) {
         // console.error("Could not copy content to clipboard");
       }
-    }
+    },
   }
 }
 </script>
