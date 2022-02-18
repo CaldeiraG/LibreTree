@@ -97,7 +97,7 @@ export default {
   ],
 
   serverMiddleware: [
-    '~/middleware/redirects.js'
+    '~/middleware/redirects.js',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -129,6 +129,9 @@ export default {
         test: /\.ya?ml$/,
         use: "js-yaml-loader"
       })
+      config.node = {
+        fs: 'empty'
+      }
     }
   }
 }

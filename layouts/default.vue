@@ -64,7 +64,7 @@
 
     <v-parallax
       dark
-      src="https://cdn.caldeirag.xyz/assets/shubham-dhage-NsPqV-WsZYY-unsplash.jpg"
+      src="https://cdn.caldeirag.xyz/hOli8/NuRepAde58.jpg/raw"
       fill-height
       style="height: 100%;"
     >
