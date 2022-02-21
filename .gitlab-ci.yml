@@ -5,7 +5,7 @@ buildDev:
   services:
     - docker:19.03.12-dind
   variables:
-    IMAGE_TAG: gitlab.onlytunes.uk:5050/caldeirag/caldeirag.xyz:latest
+    IMAGE_TAG: gitlab.onlytunes.uk:5050/caldeirag/libretree:latest
     DOCKER_TLS_CERTDIR: ""
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD https://gitlab.onlytunes.uk:5050
