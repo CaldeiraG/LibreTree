@@ -40,7 +40,7 @@
       </v-app-bar-nav-icon>
 
 
-      <v-app-bar-title class="hidden-md-and-up">CaldeiraG</v-app-bar-title>
+      <v-app-bar-title class="hidden-md-and-up">{{title}}</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn class="ma-2 hidden-xs-only overflow-y-auto" @click="toTop()">Homepage</v-btn>
 <!--      <v-btn icon @click="toggle_dark_mode">
@@ -64,7 +64,7 @@
 
     <v-parallax
       dark
-      src="https://cdn.caldeirag.xyz/hOli8/NuRepAde58.jpg/raw"
+      :src="background_image"
       fill-height
       style="height: 100%;"
     >
@@ -82,14 +82,18 @@
     <v-footer
       :absolute="!fixed"
       app
+      padless
     >
-      <span>CaldeiraG &copy; {{ new Date().getFullYear() }}</span>
-<!--      <v-col class="ma-1 text-right"><NuxtLink class="ma-1" to="/TermsOfService" target="_blank">Terms of Service</NuxtLink><NuxtLink class="ma-1" to="/PrivacyPolicy" target="_blank">Privacy Policy</NuxtLink></v-col>-->
+      <v-col>{{ footer }} &copy; {{ new Date().getFullYear() }}</v-col>
+      <v-col class="ma-1 text-right">LibreTree v{{version}} <a href="https://github.com/CaldeiraG/LibreTree"><img width="16" height="16" :src="github" class="align-center"/></a></v-col>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+
+import siteconfig from '../configuration.yaml';
+import GitHubLogo from '../assets/GitHub-Mark-Light-32px.png';
 
 export default {
   components: { },
@@ -101,9 +105,12 @@ export default {
       fixed: false,
       darkMode: true,
       fab: false,
-
-      title: 'CaldeiraG',
+      github: GitHubLogo,
+      background_image: siteconfig[0].site.background_image,
+      title: siteconfig[0].site.title,
+      footer: siteconfig[0].site.footer,
       projects: 'Homepage',
+      version: this.$config.version,
     }
   },
   mounted() {
@@ -146,7 +153,7 @@ export default {
 <style>
 
 .scrolltop {
-  bottom: 80px;
+  bottom: 80px !important;
 }
 
 </style>

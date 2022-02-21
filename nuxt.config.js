@@ -1,10 +1,16 @@
+import fs from 'fs'
 import colors from 'vuetify/es5/util/colors'
+import yaml from 'js-yaml'
+import pkg from './package.json'
+
+const siteconfig = yaml.loadAll(fs.readFileSync('./configuration.yaml', 'utf8'))
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
-    titleTemplate: "caldeirag.xyz",
-    title: "caldeirag.xyz",
+    titleTemplate: siteconfig[0].site.title,
+    title: siteconfig[0].site.title,
     htmlAttrs: {
       lang: 'en'
     },
@@ -24,17 +30,17 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "CaldeiraG",
+        content: siteconfig[0].site.title,
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: "My personal website",
+        content: siteconfig[0].site.description,
       },
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://cdn.caldeirag.xyz/profile.png",
+        content: siteconfig[0].site.profile_image,
       },
       { property: "og:image:width", content: "800" },
       { property: "og:image:height", content: "800" },
@@ -99,6 +105,11 @@ export default {
   serverMiddleware: [
     '~/middleware/redirects.js',
   ],
+
+  publicRuntimeConfig: {
+    discordClientID: process.env.DISCORD_CLIENT_ID,
+    version: pkg.version
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

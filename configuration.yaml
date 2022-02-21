@@ -2,7 +2,9 @@
 site:
   title: "CaldeiraG.xyz"
   description: "My personal website"
-  profile-image: ""
+  profile_image: "https://cdn.caldeirag.xyz/hOli8/hiVEQAvi22.png/raw"
+  background_image: "https://cdn.caldeirag.xyz/hOli8/NuRepAde58.jpg/raw"
+  footer: "CaldeiraG"
 
 github: CaldeiraG
 twitter: CaldeiraGG

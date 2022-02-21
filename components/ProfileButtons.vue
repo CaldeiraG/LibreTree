@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="ma-1"><v-btn alt="GitHub" elevation="2" x-large color="#383838" href="github" class="white--text"><img width="24" height="24" :src="github" class="ma-1"/> GitHub</v-btn></div>
-    <div class="ma-1"><v-btn alt="Twitter" elevation="2" x-large color="#1DA1F2" href="twitter" class="white--text"><img width="24" height="20" :src="twitter" class="ma-1"/>Twitter</v-btn></div>
-    <div class="ma-1"><v-btn alt="Ko-Fi" elevation="2" x-large color="#FF5E5B" href="kofi" class="white--text"><img width="24" height="24" :src="kofi" class="ma-1"/>Ko-Fi</v-btn></div>
-    <div class="ma-1"><v-btn alt="Instagram" elevation="2" x-large href="instagram" class="white--text instagram"><img width="24" height="24" :src="instagram" class="ma-1"/>Instagram</v-btn></div>
+    <div class="ma-1"><v-btn alt="GitHub" elevation="2" x-large color="#383838" href="github" class="white--text"><img width="24" height="24" :src="github" class="ma-1"/> {{githubUsername}}</v-btn></div>
+    <div class="ma-1"><v-btn alt="Twitter" elevation="2" x-large color="#1DA1F2" href="twitter" class="white--text"><img width="24" height="20" :src="twitter" class="ma-1"/>{{twitterUsername}}</v-btn></div>
+    <div class="ma-1"><v-btn alt="Ko-Fi" elevation="2" x-large color="#FF5E5B" href="kofi" class="white--text"><img width="24" height="24" :src="kofi" class="ma-1"/>{{kofiUsername}}</v-btn></div>
+    <div class="ma-1"><v-btn alt="Instagram" elevation="2" x-large href="instagram" class="white--text instagram"><img width="24" height="24" :src="instagram" class="ma-1"/>{{instagramUsername}}</v-btn></div>
     <div class="ma-1">
       <v-btn alt="Discord" elevation="2" x-large color="#5865F2" class="white--text discord" @click="copyURL(discordUsername); snackbar = true">
         <img width="21" height="24" :src="discord" class="ma-1"/>{{ discordUsername }}
@@ -48,6 +48,10 @@ export default {
       instagram: InstagramLogo,
       discord: DiscordLogo,
       discordUsername: siteconfig[0].discord,
+      githubUsername: siteconfig[0].github,
+      twitterUsername: siteconfig[0].twitter,
+      kofiUsername: siteconfig[0].kofi,
+      instagramUsername: siteconfig[0].instagram,
       text: 'Copied to clipboard!',
       snackbar: false,
       timeout: 1000,
