@@ -10,7 +10,7 @@
       <v-col cols="12" justify="center" align="center">
         <ProfileDescription/>
       </v-col>
-      <v-col cols="12" justify="center" align="center">
+      <v-col cols="8" justify="center" align="center">
         <ProfileButtons/>
       </v-col>
     </v-row>
