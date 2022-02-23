@@ -14,11 +14,19 @@
     <v-btn v-if="venmoUsername != null" alt="Venmo" elevation="2" x-large color="#73777D" href="venmo" class="white--text ma-1"><img width="24" height="24" :src="venmo" class="ma-1"/> {{venmoUsername}}</v-btn>
     <v-btn v-if="patreonUsername != null" alt="Patreon" elevation="2" x-large color="#FF424D" href="patreon" class="white--text ma-1"><img width="24" height="24" :src="patreon" class="ma-1"/> {{patreonUsername}}</v-btn>
     <v-btn v-if="wakatimeUsername != null" alt="Wakatime" elevation="2" x-large color="#0088CC" href="wakatime" class="white--text ma-1"><img width="24" height="24" :src="wakatime" class="ma-1"/> {{wakatimeUsername}}</v-btn>
-
-      <v-btn v-if="discordUsername != null" alt="Discord" elevation="2" x-large color="#5865F2" class="white--text discord ma-1" @click="copyURL(discordUsername); snackbar = true">
-        <img width="21" height="24" :src="discord" class="ma-1"/>{{ discordUsername }}
-      </v-btn>
-      <v-snackbar
+    <v-btn v-if="bandcampUsername != null" alt="Bandcamp" elevation="2" x-large color="#629AA9" href="bandcamp" class="white--text ma-1"><img width="24" height="24" :src="bandcamp" class="ma-1"/> {{bandcampUsername}}</v-btn>
+    <v-btn v-if="spotifyUsername != null" alt="Spotify" elevation="2" x-large color="#1DB954" href="spotify" class="white--text ma-1"><img width="24" height="24" :src="spotify" class="ma-1"/> {{spotifyUsername}}</v-btn>
+    <v-btn v-if="cashappUsername != null" alt="Cash App" elevation="2" x-large color="#222423" href="cashapp" class="white--text ma-1"><img width="24" height="24" :src="cashapp" class="ma-1"/> {{cashappUsername}}</v-btn>
+    <v-btn v-if="giteaUsername != null" alt="Gitea" elevation="2" x-large color="#264D73" href="gitea" class="white--text ma-1"><img width="24" height="24" :src="gitea" class="ma-1"/> {{giteaUsername}}</v-btn>
+    <v-btn v-if="sponsorblockUsername != null" alt="Sponsorblock" elevation="2" x-large color="#F7931E" href="sponsorblock" class="white--text ma-1"><img width="24" height="24" :src="sponsorblock" class="ma-1"/> {{sponsorblockUsername}}</v-btn>
+    <v-btn v-if="onlyfansUsername != null" alt="OnlyFans" elevation="2" x-large color="#003057" href="onlyfans" class="white--text ma-1"><img width="24" height="24" :src="onlyfans" class="ma-1"/> {{onlyfansUsername}}</v-btn>
+    <v-btn v-if="soundcloudUsername != null" alt="Soundcloud" elevation="2" x-large color="#FF5519" href="soundcloud" class="white--text ma-1"><img width="24" height="24" :src="soundcloud" class="ma-1"/> {{soundcloudUsername}}</v-btn>
+    <v-btn v-if="telegramUsername != null" alt="Telegram" elevation="2" x-large color="#26A4E2" href="telegram" class="white--text ma-1"><img width="24" height="24" :src="telegram" class="ma-1"/> {{telegramUsername}}</v-btn>
+    <v-btn v-if="twitchUsername != null" alt="Twitch" elevation="2" x-large color="#6441A5" href="twitch" class="white--text ma-1"><img width="21" height="24" :src="twitch" class="ma-1"/> {{twitchUsername}}</v-btn>
+    <v-btn v-if="youtubeUsername != null" alt="Youtube" elevation="2" x-large color="#FF0000" href="youtube" class="white--text ma-1"><img width="24" height="17" :src="youtube" class="ma-1"/> {{youtubeUsername}}</v-btn>
+    <v-btn v-if="tshirtUsername != null" alt="T-Shirt" elevation="2" x-large color="#FF5733" href="tshirt" class="white--text ma-1"><img width="24" height="24" :src="tshirt" class="ma-1"/>T-Shirts</v-btn>
+    <v-btn v-if="discordUsername != null" alt="Discord" elevation="2" x-large color="#5865F2" class="white--text discord ma-1" @click="copyURL(discordUsername); snackbar = true"><img width="21" height="24" :src="discord" class="ma-1"/>{{ discordUsername }}</v-btn>
+    <v-snackbar
       v-model="snackbar"
       :timeout="timeout"
     >
@@ -52,6 +60,18 @@ import PayPalLogo from '../assets/PP_Icon.png';
 import VenmoLogo from '../assets/Venmo_Icon.png';
 import PatreonLogo from '../assets/Digital-Patreon-Logo_White.png';
 import WakatimeLogo from '../assets/WakaTime.png';
+import TshirtLogo from '../assets/icons8-t-shirt-50.png';
+import BandcampLogo from '../assets/bandcamp-button-circle-grey-32.png';
+import SpotifyLogo from '../assets/Spotify_Icon_RGB_White.png';
+import CashAppLogo from '../assets/CashAppIcon.png';
+import GiteaLogo from '../assets/gitea.svg';
+import SponsorblockLogo from '../assets/IconSponsorBlocker256px.png';
+import OnlyFansLogo from '../assets/OnlyFans_Social_Icon_Circle_White.png';
+import SoundcloudLogo from '../assets/soundcloud24px.png';
+import TelegramLogo from '../assets/TelegramLogo.png';
+import TwitchLogo from '../assets/TwitchGlitchBlackOps.png';
+import YoutubeLogo from '../assets/youtube_social_icon_dark.png';
+
 import siteconfig from '../configuration.yaml';
 
 export default {
@@ -67,6 +87,17 @@ export default {
       venmo: VenmoLogo,
       patreon: PatreonLogo,
       wakatime: WakatimeLogo,
+      tshirt: TshirtLogo,
+      bandcamp: BandcampLogo,
+      spotify: SpotifyLogo,
+      cashapp: CashAppLogo,
+      gitea: GiteaLogo,
+      sponsorblock: SponsorblockLogo,
+      onlyfans: OnlyFansLogo,
+      soundcloud: SoundcloudLogo,
+      telegram: TelegramLogo,
+      twitch: TwitchLogo,
+      youtube: YoutubeLogo,
       discordUsername: siteconfig[0].discord,
       githubUsername: siteconfig[0].github,
       twitterUsername: siteconfig[0].twitter,
@@ -81,6 +112,17 @@ export default {
       venmoUsername: siteconfig[0].venmo,
       patreonUsername: siteconfig[0].patreon,
       wakatimeUsername: siteconfig[0].wakatime,
+      tshirtUsername: siteconfig[0].tshirt,
+      bandcampUsername: siteconfig[0].bandcamp,
+      spotifyUsername: siteconfig[0].spotify,
+      cashappUsername: siteconfig[0].cashapp,
+      giteaUsername: siteconfig[0].gitea,
+      sponsorblockUsername: siteconfig[0].sponsorblock,
+      onlyfansUsername: siteconfig[0].onlyfans,
+      soundcloudUsername: siteconfig[0].soundcloud,
+      telegramUsername: siteconfig[0].telegram,
+      twitchUsername: siteconfig[0].twitch,
+      youtubeUsername: siteconfig[0].youtube,
       mail: siteconfig[0].mail,
       text: 'Copied to clipboard!',
       snackbar: false,

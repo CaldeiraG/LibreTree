@@ -62,6 +62,50 @@ export default function(req, res, next) {
     {
       from: '/wakatime',
       to: 'https://wakatime.com/' + siteconfig[0].wakatime
+    },
+    {
+      from: '/tshirt',
+      to: siteconfig[0].tshirt
+    },
+    {
+      from: '/bandcamp',
+      to: 'https://' + siteconfig[0].bandcamp + '.bandcamp.com/'
+    },
+    {
+      from: '/spotify',
+      to: 'https://open.spotify.com/user/' + siteconfig[0].spotify
+    },
+    {
+      from: '/cashapp',
+      to: 'https://cash.app/$' + siteconfig[0].cashapp
+    },
+    {
+      from: '/gitea',
+      to: 'gitea.com/' + siteconfig[0].gitea
+    },
+    {
+      from: '/sponsorblock',
+      to: 'https://sb.ltn.fi/username/' + siteconfig[0].sponsorblock
+    },
+    {
+      from: '/onlyfans',
+      to: 'https://onlyfans.com/' + siteconfig[0].onlyfans
+    },
+    {
+      from: '/soundcloud',
+      to: 'https://soundcloud.com/' + siteconfig[0].soundcloud
+    },
+    {
+      from: '/twitch',
+      to: 'https://twitch.tv/' + siteconfig[0].twitch
+    },
+    {
+      from: '/youtube',
+      to: 'https://youtube.com/c/' + siteconfig[0].youtube
+    },
+    {
+      from: '/telegram',
+      to: 'https://t.me/' + siteconfig[0].telegram
     }
   ]
   const redirect = redirects.find((r) => r.from === req.url)
