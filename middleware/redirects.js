@@ -106,6 +106,10 @@ export default function(req, res, next) {
     {
       from: '/telegram',
       to: 'https://t.me/' + siteconfig[0].telegram
+    },
+    {
+      from: '/discord',
+      to: 'https://discord.gg/' + siteconfig[0].discord_guild
     }
   ]
   const redirect = redirects.find((r) => r.from === req.url)

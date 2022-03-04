@@ -25,6 +25,7 @@
     <v-btn v-if="twitchUsername != null" alt="Twitch" elevation="2" x-large color="#6441A5" href="twitch" class="white--text ma-1"><img width="21" height="24" :src="twitch" class="ma-1"/> {{twitchUsername}}</v-btn>
     <v-btn v-if="youtubeUsername != null" alt="Youtube" elevation="2" x-large color="#FF0000" href="youtube" class="white--text ma-1"><img width="24" height="17" :src="youtube" class="ma-1"/> {{youtubeUsername}}</v-btn>
     <v-btn v-if="tshirtUsername != null" alt="T-Shirt" elevation="2" x-large color="#FF5733" href="tshirt" class="white--text ma-1"><img width="24" height="24" :src="tshirt" class="ma-1"/>T-Shirts</v-btn>
+    <v-btn v-if="discordGuild != null" alt="Discord Guild" elevation="2" x-large color="#5865F2" href="discord" class="white--text ma-1 whitespace"><img width="21" height="24" :src="discord" class="ma-1"/><span class="ma-1">{{$store.state.discordGuildName}}</span></v-btn>
     <v-btn v-if="discordUsername != null" alt="Discord" elevation="2" x-large color="#5865F2" class="white--text discord ma-1" @click="copyURL(discordUsername); snackbar = true"><img width="21" height="24" :src="discord" class="ma-1"/>{{ discordUsername }}</v-btn>
     <v-snackbar
       v-model="snackbar"
@@ -123,6 +124,7 @@ export default {
       telegramUsername: siteconfig[0].telegram,
       twitchUsername: siteconfig[0].twitch,
       youtubeUsername: siteconfig[0].youtube,
+      discordGuild: siteconfig[0].discord_guild,
       mail: siteconfig[0].mail,
       text: 'Copied to clipboard!',
       snackbar: false,
@@ -137,7 +139,7 @@ export default {
         // console.error("Could not copy content to clipboard");
       }
     },
-  }
+  },
 }
 </script>
 
@@ -154,5 +156,7 @@ export default {
 .white--text {
   width: 250px;
 }
+
+.v-btn__content { width: 100%; white-space: normal; }
 
 </style>

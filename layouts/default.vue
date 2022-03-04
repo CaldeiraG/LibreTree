@@ -131,6 +131,9 @@ export default {
         this.$vuetify.theme.dark.toString()
       );
     }
+
+    this.$store.dispatch("getDiscordGuildName");
+    this.discordGuildName = this.$store.state.discordGuildName;
   },
   methods: {
     toggle_dark_mode() {
