@@ -110,6 +110,10 @@ export default function(req, res, next) {
     {
       from: '/discord',
       to: 'https://discord.gg/' + siteconfig[0].discord_guild
+    },
+    {
+      from: '/subreddit',
+      to: 'https://reddit.com/r/' + siteconfig[0].reddit_subreddit
     }
   ]
   const redirect = redirects.find((r) => r.from === req.url)

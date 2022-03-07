@@ -134,6 +134,8 @@ export default {
 
     this.$store.dispatch("getDiscordGuildName");
     this.discordGuildName = this.$store.state.discordGuildName;
+    this.$store.dispatch("getSubredditInfo");
+    this.redditSubreddit = this.$store.state.redditSubreddit;
   },
   methods: {
     toggle_dark_mode() {

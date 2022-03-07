@@ -10,6 +10,7 @@
     <v-btn v-if="linkedinUsername != null" alt="LinkedIn" elevation="2" x-large color="#F0B7A8" href="linkedin" class="white--text ma-1"><svg aria-hidden="true" class="svg-icon iconLinkedIn ma-1" width="24" height="24" viewBox="0 0 18 18"><path d="M15 1a2 2 0 0 1 2 1.85V15a2 2 0 0 1-1.85 2H3a2 2 0 0 1-2-1.85V3a2 2 0 0 1 1.85-2H15Zm-3.21 5.8c-1.09 0-1.83.56-2.19 1.13l-.06.11h-.03V7H7.23v7.63H9.6v-3.77c0-1 .2-1.96 1.43-1.96 1.16 0 1.23 1.04 1.23 1.9v3.83h2.37v-4.19c0-2.05-.44-3.63-2.84-3.63ZM5.75 7H3.37v7.63h2.38V7Zm-1.2-3.8a1.38 1.38 0 1 0 0 2.75 1.38 1.38 0 0 0 0-2.75Z" fill="#1178B3"/></svg>{{linkedinUsername}}</v-btn>
     <v-btn v-if="mail != null" alt="Email" elevation="2" x-large color="#C71610" href="email" class="white--text ma-1"><svg aria-hidden="true" class="svg-icon iconMail ma-1" width="24" height="24" viewBox="0 0 18 18"><path d="m1 6 8 5 8-5V4L9 9 1 4c0-1.1.9-2 2-2h12c1.09 0 2 .91 2 2v10c0 1.09-.91 2-2 2H3c-1.09 0-2-.91-2-2V6Z"/></svg>Email</v-btn>
     <v-btn v-if="redditUsername != null" alt="Reddit" elevation="2" x-large color="#7A9299" href="reddit" class="white--text ma-1"><img width="24" height="24" :src="reddit" class="ma-1"/> {{redditUsername}}</v-btn>
+    <v-btn v-if="redditSubreddit != null" alt="Reddit" elevation="2" x-large color="#7A9299" href="reddit" class="white--text ma-1"><img width="24" height="24" :src="reddit" class="ma-1"/> {{$store.state.redditSubreddit}}</v-btn>
     <v-btn v-if="payPalUsername != null" alt="PayPal" elevation="2" x-large color="#007C85" href="paypal" class="white--text ma-1"><img width="24" height="24" :src="paypal" class="ma-1"/> {{payPalUsername}}</v-btn>
     <v-btn v-if="venmoUsername != null" alt="Venmo" elevation="2" x-large color="#73777D" href="venmo" class="white--text ma-1"><img width="24" height="24" :src="venmo" class="ma-1"/> {{venmoUsername}}</v-btn>
     <v-btn v-if="patreonUsername != null" alt="Patreon" elevation="2" x-large color="#FF424D" href="patreon" class="white--text ma-1"><img width="24" height="24" :src="patreon" class="ma-1"/> {{patreonUsername}}</v-btn>
@@ -125,6 +126,7 @@ export default {
       twitchUsername: siteconfig[0].twitch,
       youtubeUsername: siteconfig[0].youtube,
       discordGuild: siteconfig[0].discord_guild,
+      redditSubreddit: siteconfig[0].reddit_subreddit,
       mail: siteconfig[0].mail,
       text: 'Copied to clipboard!',
       snackbar: false,
