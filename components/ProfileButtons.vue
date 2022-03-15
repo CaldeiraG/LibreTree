@@ -1,8 +1,8 @@
 <template>
   <div>
   <span v-for="(button, index) in siteconfig.buttons" :key="index + randomKey">
-    <v-btn  v-if="button.platform !== 'twitter'" :alt="button.platform" elevation="2" x-large :color="button.color" :href="button.platform" class="white--text ma-1"><img width="24" height="24" :src="getImage(button.platform)" class="ma-1"/>{{button.text}}</v-btn>
-    <v-btn  v-if="button.platform == 'twitter'" :alt="button.platform" elevation="2" x-large :color="button.color" :href="button.platform" class="white--text ma-1"><img width="24" height="20" :src="getImage(button.platform)" class="ma-1"/>{{button.text}}</v-btn>
+    <v-btn  v-if="button.platform !== 'twitter'" :alt="button.platform" elevation="2" x-large :color="button.color" :href="button.platform + '/' + button.profile" class="white--text ma-1"><img width="24" height="24" :src="getImage(button.platform)" class="ma-1"/>{{button.text}}</v-btn>
+    <v-btn  v-if="button.platform == 'twitter'" :alt="button.platform" elevation="2" x-large :color="button.color" :href="button.platform + '/' + button.profile" class="white--text ma-1"><img width="24" height="20" :src="getImage(button.platform)" class="ma-1"/>{{button.text}}</v-btn>
 <!--    <v-btn v-if="githubUsername != null" alt="GitHub" elevation="2" x-large color="#383838" href="github" class="white&#45;&#45;text ma-1"><img width="24" height="24" :src="github" class="ma-1"/> {{githubUsername}}</v-btn>
     <v-btn v-if="twitterUsername != null" alt="Twitter" elevation="2" x-large color="#1DA1F2" href="twitter" class="white&#45;&#45;text ma-1"><img width="24" height="20" :src="twitter" class="ma-1"/>{{twitterUsername}}</v-btn>
     <v-btn v-if="kofiUsername != null" alt="Ko-Fi" elevation="2" x-large color="#FF5E5B" href="kofi" class="white&#45;&#45;text ma-1"><img width="24" height="24" :src="kofi" class="ma-1"/>{{kofiUsername}}</v-btn>

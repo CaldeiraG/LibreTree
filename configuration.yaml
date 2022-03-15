@@ -8,18 +8,19 @@ site:
 
 buttons:
   button1:
-    id: something
     platform: "twitter"
     profile: "caldeirag"
     text: "Twitter"
     color: "#1DA1F2"
-    logo: "../assets/twitter.png"
   button2:
-    id: other
     platform: "github"
     profile: "caldeirag"
     text: "GitHub"
     color: "#24292e"
-    logo: "../assets/github.png"
+  button3:
+    platform: "twitter"
+    profile: "onlytunes_np"
+    text: "OnlyTunes"
+    color: "#1DA1F2"
 
 ---

@@ -8,8 +8,8 @@ export default function(req, res, next) {
 
   const redirects = [
     {
-      from: "/github",
-      to: "https://github.com/" + siteconfig[0].github
+      from: "/github/:username",
+      to: "https://github.com/:username"
     },
     {
       from: "/twitter",
