@@ -143,6 +143,6 @@ export default {
       config.node = {
         fs: 'empty'
       }
-    }
+    },
   }
 }

@@ -92,8 +92,8 @@
 
 <script>
 
+import GitHubLogo from 'assets/github.png';
 import siteconfig from '../configuration.yaml';
-import GitHubLogo from '../assets/GitHub-Mark-Light-32px.png';
 
 export default {
   components: { },

@@ -6,35 +6,20 @@ site:
   background_image: "https://cdn.caldeirag.xyz/hOli8/NuRepAde58.jpg/raw"
   footer: "CaldeiraG"
 
-github: CaldeiraG
-twitter: CaldeiraGG
-kofi: caldeirag
-instagram: caldeirag.xyz
-discord: CaldeiraG#0496
-stackoverflowid: 9334297
-stackoverflow: caldeirag
-gitlab: caldeirag
-linkedin: caldeirag
-slack: caldeirag
-mail: cal@caldeirag.xyz
-reddit: caldeiragamer
-paypal: caldeirag
-venmo: caldeirag
-patreon: caldeirag
-wakatime: caldeirag
-tshirt: https://cdn.caldeirag.xyz/hOli8/hiVEQAvi22.png/raw
-spotify: caldeirag
-bandcamp: caldeirag
-cashapp: caldeirag
-gitea: caldeirag
-sponsorblock: caldeirag
-telegram: caldeirag
-onlyfans: caldeirag
-twitch: caldeirag
-youtube: caldeirag
-soundcloud: caldeirag
-discord_guild: overlordclai
-reddit_subreddit: portugal
-hetrixtools_tracker: 75bfa44f5d2721b7b172629246f88594
-hetrixtools_token: b50c914b16acbafe93cacbd012eccfbb
+buttons:
+  button1:
+    id: something
+    platform: "twitter"
+    profile: "caldeirag"
+    text: "Twitter"
+    color: "#1DA1F2"
+    logo: "../assets/twitter.png"
+  button2:
+    id: other
+    platform: "github"
+    profile: "caldeirag"
+    text: "GitHub"
+    color: "#24292e"
+    logo: "../assets/github.png"
+
 ---
