@@ -8,60 +8,60 @@ export default function(req, res, next) {
 
   const redirects = [
     {
-      from: "/github/:username",
-      to: "https://github.com/:username"
+      from: "/github",
+      to: "https://github.com/"
     },
     {
       from: "/twitter",
-      to: "https://twitter.com/" + siteconfig[0].twitter
+      to: "https://twitter.com/"
     },
     {
       from: "/kofi",
-      to: "https://ko-fi.com/" + siteconfig[0].kofi
+      to: "https://ko-fi.com/"
     },
     {
       from: "/instagram",
-      to: "https://instagram.com/" + siteconfig[0].instagram
+      to: "https://instagram.com/"
     },
     {
       from: "/stackoverflow",
-      to: "https://stackoverflow.com/users/" + siteconfig[0].stackoverflowid
+      to: "https://stackoverflow.com/users/"
     },
     {
       from: "/gitlab",
-      to: "https://gitlab.com/" + siteconfig[0].gitlab
+      to: "https://gitlab.com/"
     },
     {
       from: "/slack",
-      to: "https://slack.com/" + siteconfig[0].slack
+      to: "https://slack.com/"
     },
     {
       from: "/linkedin",
-      to: "https://linkedin.com/in/" + siteconfig[0].linkedin
+      to: "https://linkedin.com/in/"
     },
     {
       from: "/email",
-      to: "mailto:" + siteconfig[0].email
+      to: "mailto:"
     },
     {
       from: "/reddit",
-      to: "https://reddit.com/u/" + siteconfig[0].reddit
+      to: "https://reddit.com/u/"
     },
     {
       from: "/paypal",
-      to: "https://paypal.me/" + siteconfig[0].paypal
+      to: "https://paypal.me/"
     },
     {
       from: '/venmo',
-      to: 'https://venmo.com/' + siteconfig[0].venmo
+      to: 'https://venmo.com/'
     },
     {
       from: '/patreon',
-      to: 'https://www.patreon.com/' + siteconfig[0].patreon
+      to: 'https://www.patreon.com/'
     },
     {
       from: '/wakatime',
-      to: 'https://wakatime.com/' + siteconfig[0].wakatime
+      to: 'https://wakatime.com/'
     },
     {
       from: '/tshirt',
@@ -73,52 +73,53 @@ export default function(req, res, next) {
     },
     {
       from: '/spotify',
-      to: 'https://open.spotify.com/user/' + siteconfig[0].spotify
+      to: 'https://open.spotify.com/user/'
     },
     {
       from: '/cashapp',
-      to: 'https://cash.app/$' + siteconfig[0].cashapp
+      to: 'https://cash.app/$'
     },
     {
       from: '/gitea',
-      to: 'gitea.com/' + siteconfig[0].gitea
+      to: 'gitea.com/'
     },
     {
       from: '/sponsorblock',
-      to: 'https://sb.ltn.fi/username/' + siteconfig[0].sponsorblock
+      to: 'https://sb.ltn.fi/username/'
     },
     {
       from: '/onlyfans',
-      to: 'https://onlyfans.com/' + siteconfig[0].onlyfans
+      to: 'https://onlyfans.com/'
     },
     {
       from: '/soundcloud',
-      to: 'https://soundcloud.com/' + siteconfig[0].soundcloud
+      to: 'https://soundcloud.com/'
     },
     {
       from: '/twitch',
-      to: 'https://twitch.tv/' + siteconfig[0].twitch
+      to: 'https://twitch.tv/'
     },
     {
       from: '/youtube',
-      to: 'https://youtube.com/c/' + siteconfig[0].youtube
+      to: 'https://youtube.com/c/'
     },
     {
       from: '/telegram',
-      to: 'https://t.me/' + siteconfig[0].telegram
+      to: 'https://t.me/'
     },
     {
       from: '/discord',
-      to: 'https://discord.gg/' + siteconfig[0].discord_guild
+      to: 'https://discord.gg/'
     },
     {
       from: '/subreddit',
-      to: 'https://reddit.com/r/' + siteconfig[0].reddit_subreddit
+      to: 'https://reddit.com/r/'
     }
   ]
-  const redirect = redirects.find((r) => r.from === req.url)
+  const url = req.url.split('/');
+  const redirect = redirects.find((r) => r.from === '/' + url[1])
   if (redirect) {
-    res.writeHead(301, { Location: redirect.to })
+    res.writeHead(301, { Location: redirect.to + url[2] })
     res.end()
   } else {
     next()
