@@ -1,0 +1,11 @@
+services:
+  libretree:
+    image: caldeirag/libretree:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - libretree-config:/usr/src/nuxt-app/
+
+volumes:
+  libretree-config: {}
+

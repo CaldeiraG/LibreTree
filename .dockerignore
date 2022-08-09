@@ -1,3 +1,6 @@
 node_modules
 npm-debug*
 .nuxt
+docker-compose.yml
+configuration.yaml
+configuration_backup.yaml
