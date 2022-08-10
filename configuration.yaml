@@ -19,7 +19,7 @@ buttons:
     color: "#24292e"
   button3:
     platform: "twitter"
-    profile: "onlytunes_np"
+    profile: "onlytunesnp"
     text: "OnlyTunes"
     color: "#1DA1F2"
 
