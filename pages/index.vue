@@ -42,8 +42,8 @@ body {
   color: rgba(0,0,0,0.8);
 }
 .dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
+  background-color: hsl(222.2 84% 4.9%);
+  color: hsl(210 40% 98%);
 }
 
 </style>
