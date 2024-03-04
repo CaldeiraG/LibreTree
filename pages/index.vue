@@ -32,7 +32,7 @@
 
   <ProfileImage/>
   <ProfileDescription/>
-  <ProfileButton/>
+  <ProfileSocials/>
 </template>
 
 <style>
@@ -77,6 +77,7 @@ import {
   NavigationMenuTrigger, navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
 import ProfileImage from '~/components/ProfileImage.vue'
+import ProfileSocials from '~/components/ProfileSocials.vue'
 
 
 const colorMode = useColorMode()
